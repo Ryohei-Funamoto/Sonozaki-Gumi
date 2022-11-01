@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.p-drawer {
+  background-color: $color-main;
+  transform: translateX(105%);
+  transition: transform $trs-duration;
+}
+
+.p-drawer.is-open {
+  transform: translateX(0);
+}
+
+.p-drawer__head {
+  align-items: center;
+  display: flex;
+  height: rem(strip-unit($header-height-sp));
+  padding-left: rem(20);
+}
+
+.p-drawer__logo {
+  width: rem(120);
+}
+
+.p-drawer__scroll {
+  height: calc(100% - rem(strip-unit($header-height-sp)));
+  margin: 0 auto;
+  max-width: rem(375);
+  overflow-y: auto;
+  padding: rem(72) rem(20) rem(64);
+  width: 100%;
+}

@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.home-recruit {
+  background-image: linear-gradient(to top, $color-bg02 50%, $color-bg 50%);
+  overflow: hidden;
+  
+  @include mq('md') {
+    background-image: linear-gradient(to top, $color-bg02 100%);
+  }
+}
+
+.home-recruit__title {
+  @include mq('md') {
+    text-align: center;
+  }
+}
+
+.home-recruit__items {
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: rem(30) 0 0;
+  row-gap: 0;
+
+  @include mq('md') {
+    align-items: start;
+    column-gap: rem(36);
+    grid-template-columns: repeat(3, 1fr);
+    margin: rem(52) 0 0;
+    padding: 0 rem(8) 0 0;
+  }
+}
+
+.home-recruit__item {
+  opacity: 0;
+}
+
+.home-recruit__item.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeLeftBottom;
+  animation-timing-function: $anime-timing-function;
+}
+
+.home-recruit__item:nth-child(3n - 2) {
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.home-recruit__item:nth-child(3n - 1) {
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.home-recruit__item.is-appear:nth-child(3n - 1) {
+  @include mq('md') {
+    animation-delay: 0.5s;
+  }
+}
+
+.home-recruit__item.is-appear:nth-child(3n) {
+  @include mq('md') {
+    animation-delay: 1.0s;
+  }
+}
+
+.home-recruit__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(64);
+  }
+}

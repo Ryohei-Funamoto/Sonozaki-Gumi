@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.p-footer-contact {
+  background-attachment: fixed;
+  background-image: url(../img/sp/background-image-contact.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mq('md') {
+    background-image: url(../img/pc/background-image-contact.jpg);
+  }
+}
+
+.p-footer-contact__title {
+  @include mq('md') {
+    text-align: center;
+  }
+}
+
+.p-footer-contact__description {
+  color: $color-text02;
+  font-size: rem(16);
+  @include letterSpacing(20);
+  line-height: 2;;
+  margin-top: rem(16);
+
+  @include mq('md') {
+    margin-top: rem(26);
+    text-align: center;
+  }
+}
+
+.p-footer-contact__buttons {
+  margin-top: rem(26);
+  text-align: center;
+
+  @include mq('md') {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(48);
+    text-align: initial;
+  }
+}
+
+.p-footer-contact__button:nth-child(n + 2) {
+  margin-top: rem(24);
+
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
+.p-footer-contact__button:nth-child(2n) {
+  @include mq('md') {
+    margin-left: rem(80);
+  }
+}

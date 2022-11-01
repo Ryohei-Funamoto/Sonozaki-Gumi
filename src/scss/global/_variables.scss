@@ -1,0 +1,173 @@
+// ----------
+// 左右の余白
+// ----------
+$padding-pc: 40px;
+$padding-sp: 20px;
+
+// ----------
+// レイアウト
+// ----------
+$l-xs: 375px;
+$l-sm: 576px;
+$l-md: 768px;
+$l-lg: 992px;
+$l-xl: 1200px;
+$l-xxl: 1400px;
+$l-container-sp: 540px;
+$l-container-pc: 1016px;
+
+// ----------
+// ブレークポイント
+// ----------
+$breakpoints: (
+  // モバイルファースト用
+  'xs': '(min-width: #{$l-xs})',
+  'sm': '(min-width: #{$l-sm})',
+  'md': '(min-width: #{$l-md})',
+  'lg': '(min-width: #{$l-lg})',
+  'xl': '(min-width: #{$l-xl})',
+  'xxl': '(min-width: #{l-xxl})',
+  'container': '(min-width: #{$l-container-pc})',
+
+  // PCファースト用
+  // 'xxl': '(max-width: #{$l-xxl})',
+  // 'xl': '(max-width: #{$l-xl})',
+  // 'lg': '(max-width: #{$l-lg})',
+  // 'md': '(max-width: #{$l-md - 1})',
+  // 'sm': '(max-width: #{$l-sm})',
+  // 'xs': '(max-width: #{$l-xs})',
+  // 'container': '(max-width: #{$l-container-pc})',
+
+  // ホバー分岐用
+  'hover-sp': '(hover: none) and (pointer: coarse)',
+  'hover-tab': '(hover: none) and (pointer: fine)',
+  'hover-sp-tab': '(hover: none) and (any-pointer: coarse)',
+  'hover-pc': '(hover: hover) and (pointer: fine)',
+  ) !default;
+
+// ----------
+// font-family
+// ----------
+// https://saruwakakun.com/font-family
+// https://ics.media/entry/200317/
+// https://willcloud.jp/knowhow/font-family/
+$sans-serif: 'Lato',
+  "Helvetica Neue",
+  "Helvetica",
+  "Arial",
+  'Noto Sans JP',
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  "Yu Gothic",
+  "Meiryo",
+  sans-serif;
+
+$serif: 'Noto Serif',
+  "Times New Roman",
+  'Noto Serif JP',
+  "YuMincho",
+  "Hiragino Mincho ProN",
+  "Yu Mincho",
+  "MS PMincho",
+  serif;
+
+$yu-gothic: "游ゴシック体",
+  YuGothic,
+  "游ゴシック Medium",
+  "Yu Gothic Medium",
+  "游ゴシック",
+  "Yu Gothic",
+  sans-serif;
+
+$yu-mincho: YuMincho,
+  'Yu Mincho',
+  serif;
+
+// ----------
+// font-weight
+// ----------
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+// ----------
+// opacity
+// ----------
+$opacity: 0.7;
+
+// --------------------
+// フォントの設定
+// --------------------
+$font-family-base: 'Noto Sans JP', sans-serif;
+$font-family-sub: 'Lato', sans-serif;
+$font-size-base: 16px;
+$font-weight-base: $regular;
+$line-height-base: 1.5;
+
+// --------------------
+// color
+// --------------------
+$color-main: #4B6CB7 !default;
+$color-sub: #182848 !default;
+$color-dark: #191919 !default;
+$color-accent: #B8614B !default;
+$color-active: #2A96F8 !default;
+
+// グレースケール
+$color-black: #000000 !default;
+$color-gray-800: #333333 !default;
+$color-gray-600: #666666 !default;
+$color-gray-400: #999999 !default;
+$color-gray-200: #CCCCCC !default;
+$color-white: #FFFFFF !default;
+
+// 文字
+$color-text: #191919 !default;
+$color-text02: #FFFFFF !default;
+
+// 背景色
+$color-bg: #FFFFFF;
+$color-bg02: #F0F0F0;
+
+// SNS
+$color-sns-facebook: #375B95 !default;
+$color-sns-twitter: #4BAEEA !default;
+$color-sns-line: #04BB00 !default;
+
+// ----------
+// z-index
+// ----------
+$layer-loading: 200;
+$layer-modal: 100;
+$layer-modal-overlay: 99;
+$layer-hamburger: 41;
+$layer-drawer: 40;
+$layer-drawer-overlay: 39;
+$layer-header: 30;
+$layer-floating: 20;
+$layer-footer: 10;
+$layer-up: 2;
+$layer-default: 1;
+$layer-background: -1;
+
+// ----------
+// ヘッダーの高さ
+// ----------
+$header-height-pc: 81px;
+$header-height-sp: 56px;
+
+// ----------
+// transition
+// ----------
+$trs-duration: 0.3s;
+
+// ----------
+// animation
+// ----------
+$anime-duration: 1.0s;
+$anime-fill-mode: forwards;
+$anime-timing-function: ease-in-out;

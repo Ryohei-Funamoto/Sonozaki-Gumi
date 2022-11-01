@@ -1,0 +1,152 @@
+@use "global" as *;
+
+.home-services {
+  overflow: hidden;
+  position: relative;
+  z-index: $layer-default;
+}
+
+.home-services::before {
+  background-image: linear-gradient(115deg, $color-bg02 59%, $color-bg 59%, $color-bg 91%, $color-bg02 91%);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $layer-background;
+
+  @include mq('md') {
+    background-image: linear-gradient(131deg, $color-bg02 68%, $color-bg 68%, $color-bg 90%, $color-bg02 90%);
+    height: calc(100% - rem(45));
+  }
+}
+
+.home-services__inner {
+  @include mq('md') {
+    align-items: flex-start;
+    display: flex;
+    margin-left: calc(50% - 50vw);
+    width: calc(50vw + 50%);
+  }
+}
+
+.home-services__image {
+  margin: 0 calc(50% - 50vw);
+  opacity: 0;
+  position: relative;
+  width: 100vw;
+
+  @include mq('md') {
+    flex-shrink: 0;
+    margin: 0;
+    width: calc(620 / 1191 * 100%);
+  }
+}
+
+.home-services__image.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeIn;
+  animation-timing-function: $anime-timing-function;
+}
+
+.home-services__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(375, 248);
+
+  @include mq('md') {
+    @include paddingTopHack(620, 440);
+  }
+}
+
+.home-services__image::after {
+  background-color: $color-main;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home-services__image.is-appear::after {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: bgAppearLeft;
+  animation-timing-function: $anime-timing-function;
+}
+
+.home-services__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home-services__image.is-appear img {
+  animation-delay: 0.5s;
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeIn;
+  animation-timing-function: $anime-timing-function;
+} 
+
+.home-services__body {
+  margin: rem(36) 0 0;
+  opacity: 0;
+
+  @include mq('md') {
+    margin: rem(-6) 0 0 rem(48);
+    width: calc(523 / 1191 * 100%);
+  }
+}
+
+.home-services__body.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
+.home-services__lead {
+  font-size: rem(24);
+  font-weight: $medium;
+  @include lineHeight(24, 38);
+  margin-top: rem(18);
+  
+  @include mq('md') {
+    font-size: rem(32);
+    @include lineHeight(32, 46);
+    margin-top: rem(24);
+  }
+}
+
+.home-services__description {
+  font-size: rem(14);
+  @include letterSpacing(20);
+  line-height: 2;
+  margin-top: rem(17);
+
+  @include mq('md') {
+    font-size: rem(16);
+    margin-top: rem(15);
+  }
+}
+
+.home-services__button {
+  margin-top: rem(28);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(44);
+    text-align: left;
+  }
+}

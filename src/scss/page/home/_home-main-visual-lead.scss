@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.home-main-visual-lead {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main-visual-lead__row {
+  background-color: $color-white;
+  box-shadow: rem(3) rem(3) $color-sub;
+  display: inline-block;
+  padding: rem(8) rem(15);
+  transform: translateX(rem(10)) skewX(-27deg);
+  
+  @include mq('md') {
+    box-shadow: rem(5) rem(5) $color-sub;
+    padding: rem(12) rem(20);
+    transform: translateX(rem(18)) skewX(-40deg);
+  }
+  
+  @include mq('xl') {
+    padding: rem(16) rem(26);
+    transform: translateX(rem(26)) skewX(-40deg);
+  }
+}
+
+.home-main-visual-lead__row:nth-child(n + 2) {
+  margin-top: rem(14);
+
+  @include mq('md') {
+    margin-top: rem(16);
+  }
+}
+
+.home-main-visual-lead__row span {
+  color: $color-sub;
+  display: block;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1;
+  transform: skewX(30deg);
+
+  @include mq('md') {
+    font-size: rem(26);
+    transform: skewX(40deg);
+  }
+
+  @include mq('xl') {
+    font-size: rem(32);
+  }
+}

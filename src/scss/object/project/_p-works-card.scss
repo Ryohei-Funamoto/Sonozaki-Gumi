@@ -1,0 +1,113 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-works-card {
+  display: flex;
+  flex-direction: column;
+
+  @include mq('md') {
+    background-color: $color-white;
+    box-shadow: 0 0 rem(10) color.adjust($color-dark, $alpha: -0.75);
+  }
+}
+
+.p-works-card__image {
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+  width: 100vw;
+  
+  @include mq('md') {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.p-works-card__image picture {
+  overflow: hidden;
+  position: relative;
+}
+
+.p-works-card__image picture::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(375, 160);
+  
+  @include mq('md') {
+    @include paddingTopHack(472, 240);
+  }
+}
+
+.p-works-card__image picture img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  transition: transform $trs-duration;
+  width: 100%;
+}
+
+.p-works-card:focus .p-works-card__image picture img,
+.p-works-card:hover .p-works-card__image picture img {
+  @include mq('hover-pc') {
+    transform: scale(1.1);
+  }
+}
+
+.p-works-card__number {
+  background-color: $color-sub;
+  bottom: 0;
+  color: $color-text02;
+  display: inline-block;
+  font-family: $font-family-sub;
+  font-size: rem(20);
+  font-weight: $medium;
+  left: 0;
+  line-height: 1;
+  padding: rem(10) rem(21) rem(11);
+  position: absolute;
+  z-index: $layer-up;
+
+  @include mq('md') {
+    bottom: auto;
+    font-size: rem(24);
+    left: rem(-16);
+    padding: rem(16) rem(14);
+    top: rem(-16);
+  }
+}
+
+.p-works-card__body {
+  flex-grow: 1;
+  padding: rem(22) 0 0;
+
+  @include mq('md') {
+    padding: rem(28) rem(24) rem(29);
+  }
+}
+
+.p-works-card__title {
+  color: $color-accent;
+  font-size: rem(20);
+  font-weight: $medium;
+  line-height: 1;
+
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.p-works-card__description {
+  color: $color-text;
+  font-size: rem(14);
+  @include letterSpacing(20);
+  line-height: 2;
+  margin-top: rem(16);
+
+  @include mq('md') {
+    font-size: rem(16);
+    margin-top: rem(23);
+  }
+}

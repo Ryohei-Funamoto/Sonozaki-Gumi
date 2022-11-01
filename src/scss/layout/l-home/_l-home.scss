@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.l-home__main-visual {
+  height: rem(611);
+  width: 100%;
+
+  @include mq('md') {
+    height: rem(688);
+  }
+}
+
+.l-home__services {
+  margin-top: rem(120);
+  padding: 0 0 rem(48);
+
+  @include mq('md') {
+    margin-top: rem(160);
+    padding: rem(40) 0 0;
+  }
+}
+
+.l-home__about {
+  margin-top: rem(120);
+
+  @include mq('md') {
+    margin-top: rem(160);
+    padding: rem(40) 0;
+  }
+}
+
+.l-home__works {
+  margin-top: rem(120);
+  padding: rem(27) 0 rem(41);
+
+  @include mq('md') {
+    margin-top: rem(160);
+    padding: 0;
+  }
+}
+
+.l-home__recruit {
+  margin-top: rem(116);
+  padding: 0 0 rem(120);
+
+  @include mq('md') {
+    margin-top: rem(160);
+    padding: rem(74) 0 rem(80);
+  }
+}

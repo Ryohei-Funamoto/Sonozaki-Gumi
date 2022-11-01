@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-footer-info__logo {
+  width: rem(160);
+
+  @include mq('md') {
+    width: rem(272);
+  }
+}
+
+.p-footer-info__items {
+  margin-top: rem(23);
+  font-size: 0;
+
+  @include mq('md') {
+    margin-top: rem(38);
+  }
+}
+
+.p-footer-info__item {
+  color: $color-text02;
+  font-size: rem(14);
+  line-height: 1;
+  
+  @include mq('md') {
+    font-size: rem(16);
+    @include letterSpacing(20);
+  }
+}
+
+.p-footer-info__item--no-wrap {
+  display: inline-block;
+
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.p-footer-info__item:nth-child(n + 2) {
+  margin-top: rem(16);
+
+  @include mq('md') {
+    margin-top: rem(22);
+  }
+}
+
+.p-footer-info__item a {
+  color: $color-text02;
+}

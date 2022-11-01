@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-footer-bottom {
+  background-color: $color-dark;
+}
+
+.p-footer-bottom__copyright {
+  color: $color-text02;
+  font-size: rem(10);
+  line-height: 1;
+
+  @include mq('md') {
+    font-size: rem(12);
+  }
+}

@@ -1,0 +1,159 @@
+extends ./common/_layout
+
+block pageId
+  - let pageId = 'home';
+
+block content
+  .l-home
+    main
+      section.l-home__main-visual.home-main-visual.js-main-visual
+        .home-main-visual__slider.home-main-visual-slider.swiper.js-home-main-visual-slider 
+          .home-main-visual-slider__slides.swiper-wrapper 
+            .home-main-visual-slider__slide.swiper-slide 
+              picture 
+                source(srcset="/img/pc/top-image-1.png" media="(min-width: 768px)")
+                img(src="/img/sp/top-image-1.png" alt="株式会社 園崎組")
+            .home-main-visual-slider__slide.swiper-slide 
+              picture 
+                source(srcset="/img/pc/top-image-2.png" media="(min-width: 768px)")
+                img(src="/img/sp/top-image-2.png" alt="株式会社 園崎組")
+            .home-main-visual-slider__slide.swiper-slide 
+              picture 
+                source(srcset="/img/pc/top-image-3.png" media="(min-width: 768px)")
+                img(src="/img/sp/top-image-3.png" alt="株式会社 園崎組")
+        .home-main-visual__content 
+          h2.home-main-visual__title 
+            | challenge
+            br
+            | from&nbsp;
+            br.u-hidden-pc
+            | the bottom
+          p.home-main-visual__lead.home-main-visual-lead
+            span.home-main-visual-lead__row
+              span 社会の基礎を支え
+            span.home-main-visual-lead__row
+              span 基礎から世界を変革する会社
+          .home-main-visual__news.home-news 
+            .home-news__inner 
+              h2.home-news__title
+                span news
+              .home-news__body 
+                a.home-news__content.p-post(href="#")
+                  .p-post__meta 
+                    time.p-post__published(datetime="2021-06-12") 2021.06.12
+                    .p-post__category-wrapper 
+                      span.p-post__category.c-category お知らせ
+                  p.p-post__title 新サイトを公開しました。
+                .home-news__more
+                  span
+
+
+      section#services.l-home__services.home-services
+        .l-container.home-services__container 
+          .home-services__inner
+            figure.home-services__image.js-anime-target
+              img(src="/img/pc/image-services.jpg" alt="事業内容")
+            .home-services__body.js-anime-target
+              .home-services__title 
+                h2.c-section-title
+                  | services
+                  span 事業内容
+              p.home-services__lead
+                | 人々の生活基盤を
+                br
+                | 世界最高峰の技術で支える
+              p.home-services__description
+                | 私達のモットーは、 「社会基盤から世界をより良くする」こと。
+                br.u-hidden-sp
+                | そのために最前線で国家規模のプロフェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。
+              .home-services__button 
+                a.c-button(href="#") 事業内容を更に知る
+
+      section#about.l-home__about.home-about
+        .l-container.home-about__container 
+          .home-about__inner
+            figure.home-about__sp-image.u-hidden-pc 
+              img(src="/img/sp/image-about.jpg" alt="園崎組について")
+            .home-about__body.js-anime-target
+              .home-about__title 
+                h2.c-section-title
+                  | about
+                  span 園崎組について
+              p.home-about__description
+                | 園崎組は埼玉県秩父市にて、主に土木工事にて
+                br.u-hidden-sp
+                | 社会基盤を支える企業になります。
+                br
+                | また、自社工場において施工に必要とされる
+                br.u-hidden-sp
+                | 各種資材も生産しており、各業者に提供することで、
+                br.u-hidden-sp
+                | 社会基盤の構築・整備に貢献しております。
+              .home-about__button 
+                a.c-button(href="#") 詳しく見る
+              figure.home-about__pc-image.u-hidden-sp 
+                img(src="/img/pc/image-about.jpg" alt="園崎組について")
+
+      section#works.l-home__works.home-works 
+        .l-container.home-works__container 
+          .home-works__title 
+            h2.c-section-title
+              | works
+              span 園崎組の実績
+          p.home-works__lead 
+            | 社会を基礎から、
+            br.u-hidden-pc
+            | 変革してきたプロジェクト
+          p.home-works__description
+            | 創業以來より培われた確かな技術力で社会を変革する様々な案件を手掛けてきました。
+            br.u-hidden-sp
+            | その一部を紹介させていただきます。
+          .home-works__items
+            a.home-works__item.p-works-card.js-anime-target(href="#")
+              figure.p-works-card__image
+                picture
+                  source(srcset="/img/pc/image-works-1.jpg" media="(min-width: 768px)")
+                  img(src="/img/sp/image-works01.jpg" alt="施工実績")
+                span.p-works-card__number 01
+              .p-works-card__body
+                h3.p-works-card__title 施工実績
+                p.p-works-card__description 東南アジア某国での国家規模のプロジェクトに参画した際の園崎組のプロジェクトストーリーを記載しています。
+            a.home-works__item.p-works-card.js-anime-target(href="#")
+              figure.p-works-card__image
+                picture
+                  source(srcset="/img/pc/image-works-2.jpg" media="(min-width: 768px)")
+                  img(src="/img/sp/image-works02.jpg" alt="商品納入実績")
+                span.p-works-card__number 02
+              .p-works-card__body
+                h3.p-works-card__title 商品納入実績
+                p.p-works-card__description 土木・建設資材のプロフェッショナルとして、現場で必要となる各種資材を提供しています。
+          .home-works__button 
+            a.c-button(href="#") 実績一覧を見る
+
+      section#recruit.l-home__recruit.home-recruit
+        .l-container.home-recruit__container
+          .home-recruit__title 
+            h2.c-section-title
+              | recruit
+              span 採用情報
+          .home-recruit__items 
+            a.home-recruit__item.p-recruit-card.js-anime-target(href="#")
+              figure.p-recruit-card__image
+                picture
+                  source(srcset="/img/pc/image-recruit-1.jpg" media="(min-width: 768px)")
+                  img(src="/img/sp/image-recruit-1.jpg" alt="園崎組を知る")
+              h3.p-recruit-card__more 園崎組を知る
+            a.home-recruit__item.p-recruit-card.js-anime-target(href="#")
+              figure.p-recruit-card__image
+                picture
+                  source(srcset="/img/pc/image-recruit-2.jpg" media="(min-width: 768px)")
+                  img(src="/img/sp/image-recruit-2.jpg" alt="園崎組の一日")
+              h3.p-recruit-card__more 園崎組の一日
+            a.home-recruit__item.p-recruit-card.js-anime-target(href="#")
+              figure.p-recruit-card__image
+                picture
+                  source(srcset="/img/pc/image-recruit-3.jpg" media="(min-width: 768px)")
+                  img(src="/img/sp/image-recruit-3.jpg" alt="求める人物像")
+              h3.p-recruit-card__more 求める人物像
+          .home-recruit__button 
+            a.c-button(href="#") エントリーはこちら

@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.p-loading {
+  background-color: $color-bg;
+  display: grid;
+  opacity: 1;
+  place-items: center;
+  transition: opacity $trs-duration, visibility $trs-duration;
+  visibility: visible;
+}
+
+.p-loading.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.p-loading__content {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: loadingAnime;
+  animation-timing-function: ease-in-out;
+  max-width: rem(500);
+  opacity: 0;
+  width: 50%;
+}
+
+.p-loading.is-loaded .p-loading__content {
+  display: none;
+}
+
+.p-loading__content
+
+.p-loading__title img {
+  width: 100%;
+}

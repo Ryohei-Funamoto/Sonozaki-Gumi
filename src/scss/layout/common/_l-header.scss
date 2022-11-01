@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.l-header {
+  height: rem(strip-unit($header-height-sp));
+  position: relative;
+  width: 100%;
+  z-index: $layer-header;
+
+  @include mq('md') {
+    height: rem(strip-unit($header-height-pc));
+  }
+}
+
+.l-header--fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+}

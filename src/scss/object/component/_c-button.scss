@@ -1,0 +1,51 @@
+@use "global" as *;
+@use "sass:color";
+
+.c-button {
+  align-items: center;
+  background-color: $color-main;
+  border: rem(1) solid $color-main;
+  box-shadow: rem(2) 0 rem(4) color.adjust($color-sub, $alpha: -0.54);
+  color: $color-text02;
+  display: inline-flex;
+  font-size: rem(14);
+  justify-content: center;
+  min-width: rem(255);
+  padding: rem(10) rem(11) rem(11);
+  transition: background-color $trs-duration, color $trs-duration;
+
+  @include mq('md') {
+    font-size: rem(16);
+    padding: rem(19) rem(10);
+  }
+}
+
+.c-button:focus,
+.c-button:hover {
+  @include mq('hover-pc') {
+    background-color: $color-white;
+    color: $color-main;
+  }
+}
+
+.c-button::after {
+  border-bottom: rem(1) solid $color-white;
+  border-right: rem(1) solid $color-white;
+  content: '';
+  display: block;
+  height: rem(6);
+  margin-left: rem(14);
+  position: relative;
+  right: 0;
+  transform: skewX(45deg);
+  transition: border-color $trs-duration, right $trs-duration;
+  width: rem(18);
+}
+
+.c-button:focus::after,
+.c-button:hover::after {
+  @include mq('hover-pc') {
+    border-color: $color-main;
+    right: rem(-10);
+  }
+}

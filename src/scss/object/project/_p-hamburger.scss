@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.p-hamburger {
+  position: relative;
+
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.p-hamburger__bars {
+  bottom: 0;
+  display: block;
+  height: rem(16);
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: rem(20);
+}
+
+.p-hamburger__bar {
+  background-color: $color-white;
+  display: block;
+  height: rem(2);
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.p-hamburger--black .p-hamburger__bar {
+  background-color: $color-dark;
+}
+
+.p-hamburger__bar:nth-child(1) {
+  top: 0;
+  transition: transform $trs-duration;
+}
+
+.p-hamburger.is-open .p-hamburger__bar:nth-child(1) {
+  top: rem(7);
+  transform: rotate(45deg);
+}
+
+.p-hamburger--black .p-hamburger__bar:nth-child(1) {
+  transition: background-color $trs-duration, transform $trs-duration;
+}
+
+.p-hamburger--black.is-open .p-hamburger__bar:nth-child(1) {
+  background-color: $color-white;
+  top: rem(7);
+  transform: rotate(45deg);
+}
+
+.p-hamburger__bar:nth-child(2) {
+  top: rem(7);
+  transition: opacity $trs-duration;
+}
+
+.p-hamburger.is-open .p-hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.p-hamburger__bar:nth-child(3) {
+  top: rem(14);
+  transition: transform $trs-duration;
+}
+
+.p-hamburger--black .p-hamburger__bar:nth-child(3) {
+  transition: background-color $trs-duration, transform $trs-duration;
+}
+
+.p-hamburger.is-open .p-hamburger__bar:nth-child(3) {
+  top: rem(7);
+  transform: rotate(-45deg);
+}
+
+.p-hamburger--black.is-open .p-hamburger__bar:nth-child(3) {
+  background-color: $color-white;
+  top: rem(7);
+  transform: rotate(-45deg);
+}

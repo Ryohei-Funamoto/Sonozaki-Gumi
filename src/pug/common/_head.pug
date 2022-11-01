@@ -1,0 +1,47 @@
+head(prefix=`og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ${pages[pageId].type}: http://ogp.me/ns/${pages[pageId].type}#`)
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(name="format-detection" content="telephone=no")
+  if pageId == 'home'
+    title= siteInfo.siteName
+  else
+    title= pages[pageId].title + ' | ' + siteInfo.siteName
+  // SEO 
+  meta(name="description" content=pages[pageId].description)
+  // OGP 
+  meta(property="og:url" content=siteInfo.siteUrl + pages[pageId].slug)
+  meta(property="og:type" content=pages[pageId].type)
+  meta(property="og:title" content=(pageId == 'home') ? siteInfo.siteName : pages[pageId].title + ' | ' + siteInfo.siteName)
+  meta(property="og:description" content=pages[pageId].description)
+  meta(property="og:site_name" content=siteInfo.siteName)
+  meta(property="og:image" content=pages[pageId].ogpImage)
+  meta(name="twitter:card" content="summary or summary_large_image")
+  meta(name="twitter:site" content="@ユーザー名")
+  // タッチアイコン 
+  link(rel="apple-touch-icon" sizes="192x192" href="")
+  link(rel="shortcut icon" sizes="192x192" href="")
+  // ファビコン 
+  link(rel="icon" href="")
+  // クローラー 
+  meta(name="robots" content="noindex, nofollow")
+  // Google Fonts 
+  link(rel="preconnect" href="https://fonts.googleapis.com")
+  link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap")
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap")
+  // Swiper CSS 
+  link(rel="stylesheet" href="/css/swiper-bundle.css")
+  // CSS 
+  link(rel="stylesheet" href="/css/style.css?ver")
+  // jQuery 
+  script(src="/js/lib/jquery-3.6.1.min.js")
+  // Google tag (gtag.js)
+  .
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y0H047Q4J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6Y0H047Q4J');
+    </script>

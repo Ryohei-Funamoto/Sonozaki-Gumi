@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.p-footer-main {
+  background-color: $color-sub;
+}
+
+.p-footer-main__container {
+  @include mq('md') {
+    padding: 0 rem(30) 0 rem(40);
+  }
+}
+
+.p-footer-main__inner {
+  @include mq('md') {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.p-footer-main__info {
+  margin-top: rem(77);
+
+  @include mq('md') {
+    margin-top: 0;
+  }
+}

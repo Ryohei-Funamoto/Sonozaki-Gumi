@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.p-post {
+  color: $color-text;
+  display: flex;
+}
+
+.p-post__meta {
+  display: flex;
+  flex-shrink: 0;
+  width: rem(150);
+
+  @include mq('md') {
+    width: rem(208);
+  }
+}
+
+.p-post__published {
+  font-size: rem(14);
+
+  @include mq('md') {
+    font-size: rem(16);
+    padding-top: rem(2);
+  }
+}
+
+.p-post__category-wrapper {
+  font-size: 0;
+  margin-left: rem(6);
+
+  @include mq('md') {
+    margin-left: rem(24);
+  }
+}
+
+.p-post__title {
+  font-size: rem(14);
+  width: calc(100% - rem(150));
+
+  @include mq('md') {
+    font-size: rem(16);
+    padding-top: rem(2);
+    width: calc(100% - rem(208));
+  }
+}

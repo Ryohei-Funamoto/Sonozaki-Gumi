@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-footer__main {
+  padding: rem(36) 0 rem(40);
+
+  @include mq('md') {
+    padding: rem(85) 0 rem(118);
+  }
+}
+
+.p-footer__bottom {
+  padding: rem(16) 0;
+
+  @include mq('md') {
+    padding: rem(24) 0;
+  }
+}

@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-button-to-top {
+  bottom: rem(24);
+  height: rem(48);
+  position: fixed;
+  right: rem(20);
+  width: rem(48);
+  z-index: $layer-floating;
+}

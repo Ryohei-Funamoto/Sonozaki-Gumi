@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.p-gnav {
+  display: none;
+
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.p-gnav__items {
+  align-items: center;
+  display: flex;
+  height: inherit;
+}
+
+.p-gnav__items li {
+  align-items: center;
+  display: flex;
+  font-size: rem(16);
+  height: inherit;
+}
+
+.p-gnav__items li:nth-child(n + 2)::before {
+  background-color: $color-white;
+  content: '';
+  display: block;
+  height: rem(31);
+  margin: 0 rem(10);
+  transform: rotate(40deg);
+  width: rem(1);
+}
+
+.p-gnav--black .p-gnav__items li:nth-child(n + 2)::before {
+  background-color: $color-dark;
+}
+
+.p-gnav__items li a {
+  align-items: center;
+  color: $color-text02;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  padding: 0 rem(8);
+  transition: opacity $trs-duration;
+}
+
+.p-gnav__items li a:focus,
+.p-gnav__items li a:hover {
+  @include mq('hover-pc') {
+    opacity: $opacity;
+  }
+}
+
+.p-gnav--black .p-gnav__items li a {
+  color: $color-text;
+}
+
+.p-gnav__items li a span {
+  font-family: $font-family-sub;
+  font-size: rem(10);
+  text-transform: uppercase;
+}

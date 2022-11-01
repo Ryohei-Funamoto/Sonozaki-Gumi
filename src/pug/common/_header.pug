@@ -1,0 +1,126 @@
+.l-loading.p-loading.js-loading
+      .p-loading__content 
+            .p-loading__title 
+                  img(src="/img/common/logo-b.svg" alt="株式会社 園崎組")
+
+header.l-header.p-header.js-header
+      .l-container.p-header__container
+            .p-header__inner
+                  if pageId == 'home'
+                        h1.p-header__logo.c-logo
+                              img(src="/img/common/logo-w-2.svg" alt="株式会社 園崎組")
+                  else
+                        p.p-header__logo.c-logo
+                              a(href=pages.home.slug)
+                                    img(src="/img/common/logo-w-2.svg" alt="株式会社 園崎組")
+                  nav.p-header__nav.p-gnav
+                        ul.p-gnav__items
+                              li: a(href="#")
+                                    | トップ
+                                    span top
+                              li: a(href="#services")
+                                    | 事業内容
+                                    span services
+                              li: a(href="#about")
+                                    | 園崎組について
+                                    span about
+                              li: a(href="#works")
+                                    | 園崎組の実績
+                                    span works
+                              li: a(href="#recruit")
+                                    | 採用情報
+                                    span recruit
+                              li: a(href="#contact")
+                                    | お問い合わせ
+                                    span contact
+                  button.p-header__hamburger.p-hamburger.js-hamburger
+                        span.p-hamburger__bars 
+                              span.p-hamburger__bar
+                              span.p-hamburger__bar
+                              span.p-hamburger__bar
+                  .p-header__drawer.p-drawer.js-drawer
+                        .p-drawer__head 
+                              p.p-drawer__logo 
+                                    img(src="/img/common/logo-w-2.svg" alt="株式会社 園崎組")
+                        .p-drawer__scroll 
+                              nav.p-drawer__nav.p-drawer-nav 
+                                    ul.p-drawer-nav__items 
+                                          li: a.color-black(href="#")
+                                                | トップ
+                                                span top
+                                          li: a(href="#services")
+                                                | 事業内容
+                                                span services
+                                          li: a(href="#about")
+                                                | 園崎組について
+                                                span about
+                                          li: a(href="#works")
+                                                | 園崎組の実績
+                                                span works
+                                          li: a(href="#recruit")
+                                                | 採用情報
+                                                span recruit
+                                          li: a(href="#contact")
+                                                | お問い合わせ
+                                                span contact
+
+.l-header.l-header--fixed.p-header.p-header--fixed.js-fixed-header
+      .l-container.p-header__container
+            .p-header__inner
+                  if pageId == 'home'
+                        h1.p-header__logo.c-logo
+                              img(src="/img/common/logo-b.svg" alt="株式会社 園崎組")
+                  else
+                        p.p-header__logo.c-logo
+                              a(href=pages.home.slug)
+                                    img(src="/img/common/logo-b.svg" alt="株式会社 園崎組")
+                  nav.p-header__nav.p-gnav.p-gnav--black
+                        ul.p-gnav__items
+                              li: a(href="#")
+                                    | トップ
+                                    span top
+                              li: a(href="#services")
+                                    | 事業内容
+                                    span services
+                              li: a(href="#about")
+                                    | 園崎組について
+                                    span about
+                              li: a(href="#works")
+                                    | 園崎組の実績
+                                    span works
+                              li: a(href="#recruit")
+                                    | 採用情報
+                                    span recruit
+                              li: a(href="#contact")
+                                    | お問い合わせ
+                                    span contact
+                  button.p-header__hamburger.p-hamburger.p-hamburger--black.js-fixed-header-hamburger
+                        span.p-hamburger__bars 
+                              span.p-hamburger__bar
+                              span.p-hamburger__bar
+                              span.p-hamburger__bar
+                  .p-header__drawer.p-drawer.js-fixed-header-drawer
+                        .p-drawer__head 
+                              p.p-drawer__logo 
+                                    img(src="/img/common/logo-w-2.svg" alt="株式会社 園崎組")
+                        .p-drawer__scroll 
+                              nav.p-drawer__nav.p-drawer-nav 
+                                    ul.p-drawer-nav__items 
+                                          li: a.color-black(href="#")
+                                                | トップ
+                                                span top
+                                          li: a(href="#services")
+                                                | 事業内容
+                                                span services
+                                          li: a(href="#about")
+                                                | 園崎組について
+                                                span about
+                                          li: a(href="#works")
+                                                | 園崎組の実績
+                                                span works
+                                          li: a(href="#recruit")
+                                                | 採用情報
+                                                span recruit
+                                          li: a(href="#contact")
+                                                | お問い合わせ
+                                                span contact

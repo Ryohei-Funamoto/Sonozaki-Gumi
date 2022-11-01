@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.c-section-title {
+  align-items: flex-end;
+  color: inherit;
+  display: inline-flex;
+  font-family: $font-family-sub;
+  font-size: rem(32);
+  font-weight: $bold;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include mq('md') {
+    font-size: rem(48);
+  }
+}
+
+.c-section-title--white {
+  color: $color-text02;
+}
+
+.c-section-title span {
+  align-items: center;
+  color: $color-main;
+  display: flex;
+  font-family: $font-family-base;
+  font-size: rem(20);
+  font-weight: $medium;
+  margin-left: rem(16);
+  
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.c-section-title--white span {
+  color: $color-text02;
+}
+
+.c-section-title span::before {
+  background-color: $color-main;
+  content: '';
+  display: block;
+  height: rem(24);
+  margin-right: rem(14);
+  transform: rotate(40deg);
+  transform-origin: right;
+  width: rem(1);
+  
+  @include mq('md') {
+    margin-right: rem(18);
+    height: rem(32);
+  }
+}
+
+.c-section-title--white span::before {
+  background-color: $color-white;
+}

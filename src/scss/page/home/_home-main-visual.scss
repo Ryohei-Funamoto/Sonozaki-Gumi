@@ -1,0 +1,62 @@
+@use "global" as *;
+@use "sass:color";
+
+.home-main-visual {
+  background-image: linear-gradient(to right, #4B6CB7 0%, #182848 100%);
+  position: relative;
+}
+
+.home-main-visual__slider {
+  height: 100%;
+}
+
+.home-main-visual__content {
+  left: 0;
+  margin: 0 auto;
+  max-width: rem(strip-unit($l-container-sp + $padding-sp * 2));
+  padding: 0 rem(strip-unit($padding-sp));
+  position: absolute;
+  right: 0;
+  top: calc(100 / 611 * 100%);
+  width: 100%;
+  z-index: $layer-up;
+  
+  @include mq('md') {
+    max-width: rem(strip-unit($l-container-pc + $padding-pc * 2));
+    padding: 0 rem(strip-unit($padding-pc));
+    top: calc(98 / 688 * 100%);
+  }
+}
+
+.home-main-visual__title {
+  color: $color-text02;
+  font-family: $font-family-sub;
+  font-size: rem(48);
+  font-weight: $black;
+  @include letterSpacing(20);
+  @include lineHeight(48, 58);
+  text-shadow: rem(6) 0 rem(4) color.adjust($color-sub, $alpha: -0.5);
+  text-transform: uppercase;
+
+  @include mq('md') {
+    font-size: rem(72);
+    @include lineHeight(72, 85);
+  }
+
+  @include mq('xl') {
+    font-size: rem(96);
+    @include lineHeight(96, 112);
+  }
+}
+
+.home-main-visual__lead {
+  margin-top: rem(21);
+}
+
+.home-main-visual__news {
+  margin-top: rem(130);
+
+  @include mq('md') {
+    margin-top: rem(120);
+  }
+}

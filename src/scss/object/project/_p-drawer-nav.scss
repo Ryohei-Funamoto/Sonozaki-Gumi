@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.p-drawer-nav__items li:nth-child(n + 2) {
+  margin-top: rem(32);
+}
+
+.p-drawer-nav__items li a {
+  align-items: center;
+  color: $color-text02;
+  display: flex;
+  flex-direction: column;
+  font-size: rem(20);
+}
+
+.p-drawer-nav__items li a.color-black {
+  color: $color-text;
+}
+
+.p-drawer-nav__items li a span {
+  font-family: $font-family-sub;
+  font-size: rem(14);
+  line-height: 1;
+  text-transform: uppercase;
+}
